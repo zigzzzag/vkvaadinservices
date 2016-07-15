@@ -8,6 +8,7 @@ import com.vaadin.annotations.Widgetset;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.Button;
+import com.vaadin.ui.DateField;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
@@ -40,6 +41,9 @@ public class MyUI extends UI {
         layout.addComponents(name, button);
         layout.setMargin(true);
         layout.setSpacing(true);
+
+        DateField dateField = new DateField();
+        layout.addComponent(dateField);
         
         setContent(layout);
     }
